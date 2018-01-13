@@ -3,7 +3,7 @@ setInterval(function () {
     var hashesPerSecond = miner.getHashesPerSecond();
     var totalHashes = miner.getTotalHashes();
     var acceptedHashes = miner.getAcceptedHashes();
-    document.getElementById("contain").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec<br>" + 
+    document.getElementById("monero").innerHTML = "Speed = " + hashesPerSecond.toFixed(2) + " hash/sec<br>" + 
     "Total Hashes = " + totalHashes + 
     "<br>Accepted Hashes = " + acceptedHashes;
 }, 1000);
